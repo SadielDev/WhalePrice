@@ -18,7 +18,7 @@ if __name__ == '__main__':
 
 def recv(update,context):
     CHAT_ID = update.message.chat.id
-    context.bot.sendMessage(chat_id = CHAT_ID,text = '' + update.message.text + '',parse_mode = 'MarkdownV2')
+    context.bot.sendMessage(chat_id = CHAT_ID,text = '`' + update.message.text + '`',parse_mode = 'MarkdownV2')
 
 
 updater = Updater(my_bot.token,use_context = True);
