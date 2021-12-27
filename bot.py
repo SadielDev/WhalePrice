@@ -12,7 +12,7 @@ logging.basicConfig(
 logger = logging.getLogger()
 TOKEN = '5077143516:AAFhOeav3em1Wd-kSX8GyyUw-qBp4eXkEP0' # aki cambia esto por el token que te da botfather
 
-if __name__ == '__main__':
+if name == 'main':
     my_bot = telegram.Bot(token = TOKEN)
 
 
@@ -24,8 +24,6 @@ def recv(update,context):
 updater = Updater(my_bot.token,use_context = True);
 dp = updater.dispatcher
 dp.add_handler(MessageHandler(Filters.text,recv))
-updater.start_polling()
 
-updater.idle()
-
+PORT = int(os.environ.get("PORT","8443"))
 updater.start_webhook(listen="0.0.0.0",port=PORT,url_path=TOKEN,webhook_url=f"https://sadieldev.herokuapp.com/{TOKEN}")
