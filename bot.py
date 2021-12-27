@@ -12,7 +12,7 @@ logging.basicConfig(
 logger = logging.getLogger()
 TOKEN = '5077143516:AAFhOeav3em1Wd-kSX8GyyUw-qBp4eXkEP0' # aki cambia esto por el token que te da botfather
 
-if name == 'main':
+if __name__ == '__main__':
     my_bot = telegram.Bot(token = TOKEN)
 
 
